@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  padding: 0;
+  margin: 0;
+}
+
+/*cuando hago click estoy haciendo target y la respues se ve debajo de
+la pregunta*/
+.faq-item:target .faq-item-text {
+  display: inherit;
+}
+
+/* otra forma mas larga de hacer aparecer y desaparecer el texto
+segun a quien el hago target */
+/*
+#faq-2:target > .faq-item-text {
+  display: flex;
+}
+
+#faq-2 .faq-item-text {
+  display: none;
+}
+
+#faq-3:target > .faq-item-text {
+  display: flex;
+}
+
+#faq-3 .faq-item-text {
+  display: none;
+}
+
+#faq-4:target > .faq-item-text {
+  display: flex;
+}
+
+#faq-4 .faq-item-text {
+  display: none;
+}
+
+*/
+
+a:link {
+  text-decoration: none;
+}
+
+a:active {
+  color: black;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.faq {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background-color: #a4a4a4;
+  max-width: 560px;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+@media (min-width: 961px) {
+  .faq {
+    display: flex;
+    flex-direction: row;
+    max-width: 960px;
+    background-color: #a4a4a4;
+    margin: 0 auto;
+  }
+}
+
+.faq > h2 {
+  display: flex;
+  font-size: 38px;
+  max-width: 193px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.faq-list {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 961px) {
+  .faq-list {
+    margin-left: 50px;
+  }
+}
+
+.faq-item-title {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.faq-item-title::before {
+  content: ">";
+  font-size: 40px;
+  color: red;
+  font-weight: 400;
+}
+
+.faq-item {
+  list-style-type: none;
+}
+
+.faq-item-text {
+  display: flex;
+  min-height: 80px;
+  max-width: 193px;
+  font-size: 20px;
+  margin-right: 37px;
+  margin-left: 28px;
+}
+
+@media (min-width: 400px) {
+  .faq-item-text {
+    max-width: 578px;
+  }
+}
+
+@media (min-width: 961px) {
+  .faq-item-text {
+    max-width: 578px;
+    font-size: 20px;
+    margin-right: 37px;
+  }
+}
+
+/*desaparece el texto debajo de las preguntas cuando no esta target
+hay que ponerlo al final para que funcione*/
+.faq-item-text {
+  display: none;
+}
